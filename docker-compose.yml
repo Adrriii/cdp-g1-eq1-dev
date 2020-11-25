@@ -30,7 +30,7 @@ services:
       MYSQL_DATABASE: 'cdp'
       MYSQL_USER: 'cdp'
       MYSQL_PASSWORD: 'mauvaismdp'
-      MYSQL_ROOT_PASSWORD: 'cdp'
+      MYSQL_ROOT_PASSWORD: 'mauvaismdp'
     ports:
       - "3307:3306"
 
