@@ -29,7 +29,7 @@ services:
     environment: 
       MYSQL_DATABASE: 'cdp'
       MYSQL_USER: 'cdp'
-      MYSQL_PASSWORD: 'cdp'
+      MYSQL_PASSWORD: 'mauvaismdp'
       MYSQL_ROOT_PASSWORD: 'cdp'
     ports:
       - "3307:3306"
