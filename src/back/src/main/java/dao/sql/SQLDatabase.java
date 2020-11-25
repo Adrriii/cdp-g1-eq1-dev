@@ -16,23 +16,7 @@ public class SQLDatabase {
     private static Connection connection;
 
     private static void openConnection() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection(
-                    "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + "?user=" +
-                            dbUsername + "&password=" + dbPassword
-            );
-        } catch (Exception ignored) {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-                connection = DriverManager.getConnection(
-                        "jdbc:mysql://" + backupHost + ":" + backupPort + "/" + dbName + "?user=" +
-                                dbUsername + "&password=" + dbPassword
-                );
-            } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException exception) {
-                throw new Error(exception);
-            }
-        }
+
     }
 
     public static Connection getConnection() {
